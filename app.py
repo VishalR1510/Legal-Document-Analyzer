@@ -13,18 +13,22 @@ import fitz
 from transformers import pipeline, AutoTokenizer
 from transformers import AutoModelForSeq2SeqLM, AutoModelForTokenClassification
 from sklearn.exceptions import ConvergenceWarning
+from dotenv import load_dotenv
+load_dotenv()
+import os
 
-# ───────────── CONFIG (insert your creds) ───────────────────
-DB_CONFIG = dict(host="localhost", user="root",
-                 password="mysqlvis1510#", database="user_db")
-
+DB_CONFIG = dict(
+    host="localhost",
+    user="root",
+    password=os.getenv("DB_PASSWORD"),
+    database="user_db"
+)
 DOCS_DB_CONFIG = dict(host="localhost", user="root",
-                      password="mysqlvis1510#", database="docs_db")
+                      password=os.getenv("DB_PASSWORD"), database="docs_db")
+SMTP_SENDER = os.getenv("SMTP_EMAIL")
+SMTP_PASS   = os.getenv("SMTP_PASS")
 
-SMTP_SENDER = "codetesting1510@gmail.com"
-SMTP_PASS   = "azfl jqbf lymo bdpk"
 PRIMARY_BLUE = "#4F8BF9"
-
 # ───────────── GLOBAL CSS (incl. nav bar tweaks) ────────────
 st.markdown(
     f"""
