@@ -1,0 +1,58 @@
+
+#  PYTHON BYTECODE / CACHE
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+
+#  VIRTUAL ENVIRONMENTS
+
+.venv/
+venv/
+env/
+
+
+#  JUPYTER NOTEBOOK CHECKPOINTS
+
+.ipynb_checkpoints/
+
+
+#  IDE / EDITOR FOLDERS
+
+# VS Code, PyCharm / IntelliJ
+.vscode/
+.idea/
+
+
+#  OPERATING‑SYSTEM JUNK
+
+.DS_Store          # macOS
+Thumbs.db          # Windows
+
+
+#  STREAMLIT CONFIG / SECRETS
+
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+#  SENSITIVE or SECRET FILES
+
+# Environment‑variable files
+.env
+.env.*
+*.env
+
+
+*secret*
+*password*
+
+
+config.py
+settings.py
+credentials.*
+keys.*
+
+
